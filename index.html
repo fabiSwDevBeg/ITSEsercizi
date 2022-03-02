@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Esercizio 1</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script type="text/javascript">
+        function validaCampo() {
+            var valore = document.getElementById("valida").value;
+            if (valore * 1 > 0 && valore * 1 <= 100) {
+                document.getElementById("ciao").innerHTML = "Input valido!!";
+                document.getElementById("ciao").style.color = "blue";
+            } else {
+                document.getElementById("ciao").innerHTML = "Input non valido!!";
+                document.getElementById("ciao").style.color = "red";
+            }
+        }
+    </script>
+</head>
+
+<body>
+
+    <h2>Radio Buttons</h2>
+
+    <p class="class-test">Choose your favorite Web language:</p>
+
+    <form id="form-id" name="form-name">
+        <input type="radio" id="html" name="fav_language" value="HTML">
+        <label for="html">HTML</label><br>
+        <input type="radio" id="css" name="fav_language" value="CSS">
+        <label for="css">CSS</label><br>
+        <input type="radio" id="javascript" name="fav_language" value="JavaScript">
+        <label for="javascript">JavaScript</label>
+    </form>
+    <script type="text/javascript">
+        document.getElementById("paragraph-test");
+        document.write("Hello");
+        document.getElementsByTagName("<p>");
+    </script>
+    <form>
+        <input type="text" id="valida">
+    </form>
+    <button onclick="validaCampo();">Valida</button>
+    <p id="ciao">Risultato validazione</p>
+
+</body>
+
+</html>
