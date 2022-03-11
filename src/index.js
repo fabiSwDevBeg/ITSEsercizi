@@ -8,44 +8,27 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
         step((generator = generator.apply(thisArg, _arguments || [])).next());
     });
 };
-const renault = {
-    id: '53267189387218',
-    marca: 'renault',
-    modello: 'un bughi bughi',
-};
-const peugeot = {
-    id: '701225bari',
-    marca: 'peugeot',
-    modello: 'trespolino',
-};
-const BMW = {
-    id: '3701120133',
-    marca: 'BMW',
-    modello: 'clio',
-};
-const Jeep = {
-    id: '3885771333',
-    marca: 'Jeep',
-    modello: 'renegade',
-};
-const woltzvagen = {
-    id: '556565465656',
-    marca: 'Wdeipoveri',
-    modello: 'Polo',
-};
-var macchine = [renault, peugeot, BMW, Jeep, woltzvagen];
+let carDb = []; // creo un array di tipo car
+carDb.push({
+    id: 1,
+    marca: "Opel",
+    modello: "Tigra",
+});
+console.log(carDb);
+console.log("Start");
+let i = 0;
+goDelay(carDb); //passo alla funzione l'array
 function delay(ms) {
     return new Promise(resolve => setTimeout(resolve, ms));
 }
-function stampaMacchine(macchine) {
+function goDelay(cars) {
     return __awaiter(this, void 0, void 0, function* () {
-        macchine.forEach((element) => __awaiter(this, void 0, void 0, function* () {
+        for (i = 0; i < cars.length; i++) { //per la lunghezza dell'array 
+            console.log("id " + cars[i].id); //stampa ogni elemento dell'array
+            console.log("marca " + cars[i].marca);
+            console.log("modello " + cars[i].modello);
             yield delay(5000);
-            console.log(element.id);
-            yield delay(5000);
-            console.log(element.marca);
-            yield delay(5000);
-            console.log(element.modello);
-        }));
+        }
+        console.log("End");
     });
 }
